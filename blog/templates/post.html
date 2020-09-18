@@ -1,0 +1,14 @@
+{% include 'base.html' %}
+{% load static %}
+
+    {% block content %}
+
+   
+    <div class="container">
+    {{ object.title}}
+    {{ object.content|safe }}
+   <div><img class="header-image" src="{{ object.header_pic.url }}" alt=""> </div>
+
+   </div>
+
+    {% endblock content %}

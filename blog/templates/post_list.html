@@ -1,0 +1,9 @@
+<h1>Thiago Alcantara</h1>
+{% for object in object_list %}
+
+    <h1>{{object.title}}</h1>
+    <h2>{{object.content}}</h2>
+
+    <a href="{% url 'post_detail' object.slug %}">Read More </a>
+
+{% endfor %}
