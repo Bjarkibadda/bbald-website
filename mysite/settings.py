@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_instagram',
     'blog',
-    'tinymce',
     'ckeditor',
 
 ]

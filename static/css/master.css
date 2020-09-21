@@ -9,7 +9,7 @@
   }
   
   body {
-   
+   background-color: yellow;
   }
   
   .header {
@@ -184,6 +184,98 @@
   transform: rotate(-13deg);
 }
 
+/* plain header */
+
+.plain-header {
+  width: 100%;
+  height: 100px;
+  top: 0;
+  background-color:rgb(231,207,200);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 2px solid #97f2f3;
+  margin-bottom: 100px;
+}
+
+.plain-header .nav{
+  position: relative;
+  left : 70vw;
+}
+
+/* end plain header */
+
+/* post list item in post_list.html */
+
+.post-list-item {
+  /* width:600px; */
+  height: 300px;
+  border: solid 2px;
+  background-color: #CDE1DD;
+  margin-bottom: 20px;
+  cursor: pointer;
+  
+}
+
+.card-container{
+  justify-content: space-between;
+}
+
+.card-col{
+  /* margin:40px; */
+  justify-content: space-evenly;
+}
+
+.list-title{
+  vertical-align: center;
+  margin:0px;
+
+}
+
+.post-list-date{
+  display:block;
+}
+
+
+
+.media{
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+
+}
+
+.date-in-card{
+  margin-top:15px;
+  width:100%;
+  text-align: center;
+  color:grey;
+  font-size: x-small;
+  font-style: italic;
+}
+
+.card-title{
+  text-align: center;
+  font-size:2rem;
+  line-height: 2.3rem;
+}
+
+.justify-content-around{
+  justify-content: space-around;
+  height:100%;
+}
+
+.extract{
+  text-align: center;
+  justify-content: center;
+  font-style: italic;
+  font-size: small;
+}
+
+.list-container{
+  width: 90vw;
+  margin:auto;
+}
+/* end post list */
+
 @media only screen and (max-width: 1526px) {
   .ig-photo:nth-child(3) {
       display: none;
@@ -192,10 +284,4 @@
     display: none;
 }
 }
-/* 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 768px,
-  lg: 1024px
-); */
+

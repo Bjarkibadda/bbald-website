@@ -1,9 +1,36 @@
-<h1>Thiago Alcantara</h1>
+{% include 'plain_navigation.html' %}
+
+<div class="list-container">
+
+<div class="row card-col">
 {% for object in object_list %}
 
-    <h1>{{object.title}}</h1>
-    <h2>{{object.content}}</h2>
+        <div class="col-3">
 
-    <a href="{% url 'post_detail' object.slug %}">Read More </a>
+        <div onclick="location.href='{{object.slug}}/';" class="post-list-item row">
+        <div class="media col-6" style="background-image: url({{object.header_pic.url}})">
+    {% comment %} <img src="{{object.header_pic.url}}" style="background-image:url({{object.header_pic_url}})" alt=""> {% endcomment %}
+        </div>
+        <div class="media col-6">
+        <div class="row justify-content-around">
+            <p class="date-in-card col-12">{{ object.get_date }}</p>
+            <h3 class="card-title col-12">{{ object.title }}</h3>
+            <i class="fas fa-lg fa-ruler-horizontal"></i>
+            <p class="extract col-12"> {{ object.extract }} <br>  <a href="{% url 'post_detail' object.slug %}"> Read Post </a></p>
+            
+        </div>
+            {% comment %} <p class="review">{{object.content|safe}}/p> {% endcomment %}
+    {% comment %} <a href="{% url 'post_detail' object.slug %}">Read More </a> {% endcomment %}
+            {% comment %} <h3 class=""> hello world</h3> {% endcomment %}
+        </div>  
+        </div>  
+        </div>
 
+
+    
 {% endfor %}
+</div>
+
+
+
+</div>
