@@ -132,7 +132,7 @@
   border-radius :10%;
   margin-top:50px;
   height: 500px;
-  
+  cursor: pointer;
   /* sbackground-image: url("https://images.unsplash.com/photo-1531379410502-63bfe8cdaf6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"); */
 }
 
@@ -141,7 +141,7 @@
   margin-top:50px;
   height: 500px;
   margin-right: 20px;
-  
+  cursor: pointer;
   /* sbackground-image: url("https://images.unsplash.com/photo-1531379410502-63bfe8cdaf6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"); */
 }
 

@@ -19,7 +19,12 @@ class PostDetailView(DetailView):
 class PostsList(ListView):
     template_name = 'post_list.html'
     context_object_name = 'list_of_posts'
-    queryset = Post.objects.all()
+    queryset = Post.objects.filter(prj_or_blog=False)
+
+class ProjectList(ListView):
+    template_name = 'post_list.html'
+    context_object_name = 'project_list'
+    queryset = Post.objects.filter(prj_or_blog=True)
 
     
     

@@ -12,6 +12,7 @@ class Post(models.Model):
     content = RichTextField(blank=True, null=True)
     timestamp = models.DateTimeField(auto_now_add = True)
     header_pic = models.ImageField(null=True, upload_to='pictures')
+    prj_or_blog = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['timestamp'] 
