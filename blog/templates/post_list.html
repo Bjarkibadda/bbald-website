@@ -1,7 +1,10 @@
 {% include 'plain_navigation.html' %}
 
-<div class="list-container">
+<h1 class="post-list-header">#myPosts</h1>
 
+
+
+<div class="list-container">
 <div class="row card-col">
 {% for object in object_list %}
 
@@ -9,7 +12,7 @@
 
         <div onclick="location.href='{{object.slug}}/';" class="post-list-item row">
         <div class="media col-6" style="background-image: url({{object.header_pic.url}})">
-    {% comment %} <img src="{{object.header_pic.url}}" style="background-image:url({{object.header_pic_url}})" alt=""> {% endcomment %}
+
         </div>
         <div class="media col-6">
         <div class="row justify-content-around">
@@ -19,9 +22,6 @@
             <p class="extract col-12"> {{ object.extract }} <br>  <a href="{% url 'post_detail' object.slug %}"> Read Post </a></p>
             
         </div>
-            {% comment %} <p class="review">{{object.content|safe}}/p> {% endcomment %}
-    {% comment %} <a href="{% url 'post_detail' object.slug %}">Read More </a> {% endcomment %}
-            {% comment %} <h3 class=""> hello world</h3> {% endcomment %}
         </div>  
         </div>  
         </div>

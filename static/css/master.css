@@ -3,13 +3,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
   }
   
   body {
-   background-color: yellow;
+
   }
   
   .header {
@@ -23,6 +24,7 @@
     box-shadow: 0 0 3px rgba(165, 165, 165, 0);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     z-index: 1;
+    border-bottom: 4px solid RGBA(151,242,243,0) ;
   }
   
   .header-wrap {
@@ -44,6 +46,7 @@
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     transform-origin: bottom;
+   
     
   }
 
@@ -68,10 +71,13 @@
   }
 
   .nav li{
-   
       width: 80px;
       margin-right: 35px;
-      display: inline-block;
+      position: relative;
+      left:70%;
+      color:blue;
+      float:right;
+
   }    
 
   .nav li:last-child
@@ -91,12 +97,13 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       font-size: 14px;
+      float:right;
     }
   
   .hero {
     width: 100%;
     height: 90vh;
-    background: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1031&q=80') center ;
+    background: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1031&q=80') center no-repeat;
     background-size: cover;
   }
 
@@ -108,7 +115,6 @@
   border: solid 2px #97f2f3;
   margin-top:50px;
   margin-left:20px;
-  /* margin-right: 50px; */
   padding-top:30px;
   text-align: center;
   vertical-align: middle;
@@ -117,6 +123,17 @@
   border-radius: 10%;
   padding-top: 100px;
   margin-bottom: 150px;  
+}
+
+.instagram-widget:hover{
+  transform:scale(1.01)
+}
+
+.fa-address-card{
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-top:5px;
 }
 
 .ig-photo{
@@ -133,7 +150,10 @@
   margin-top:50px;
   height: 500px;
   cursor: pointer;
-  /* sbackground-image: url("https://images.unsplash.com/photo-1531379410502-63bfe8cdaf6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"); */
+}
+
+.mywork-widget1:hover{
+  transform:scale(1.01)
 }
 
 .mywork-widget2{
@@ -143,6 +163,10 @@
   margin-right: 20px;
   cursor: pointer;
   /* sbackground-image: url("https://images.unsplash.com/photo-1531379410502-63bfe8cdaf6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"); */
+}
+
+.mywork-widget2:hover{
+  transform:scale(1.01)
 }
 
 .project-img{
@@ -173,6 +197,7 @@
   margin-bottom: 100px;
   font-family: 'Bad Script', cursive;
   font-weight: bold;
+  color:white;
 
 }
 
@@ -190,10 +215,12 @@
   width: 100%;
   height: 100px;
   top: 0;
-  background-color:rgb(231,207,200);
+  background-color: black;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 2px solid #97f2f3;
   margin-bottom: 100px;
+  position:fixed;
+  z-index: 1;
 }
 
 .plain-header .nav{
@@ -205,6 +232,18 @@
 
 /* post list item in post_list.html */
 
+
+.post-list-header{
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Bad Script', cursive;
+  color:white;
+  margin-bottom: 150px;
+  margin-top:200px;
+  transform: rotate(-10deg);
+
+}
+
 .post-list-item {
   /* width:600px; */
   height: 300px;
@@ -212,7 +251,12 @@
   background-color: #CDE1DD;
   margin-bottom: 20px;
   cursor: pointer;
-  
+  transition: 1s ease;
+}
+
+.post-list-item:hover{
+  transform:scale(1.15);
+  box-shadow: 5px 5px 15px #97f2f3;
 }
 
 .card-container{
@@ -273,8 +317,42 @@
 .list-container{
   width: 90vw;
   margin:auto;
+  min-height: 800px;
 }
 /* end post list */
+
+/* Post */
+.post-content{
+  min-height: 1000px;
+  background-color: #002b44;
+  margin-top:100px;
+  margin-bottom: 100px;
+  border-radius: 2%;
+  border: 4px solid #CDE1DD;
+  box-shadow: 15px 15px 15px 15p;
+  margin-right: 40px;
+}
+
+.post-content .title{
+  text-align: center;
+  font-size: xx-large;
+  margin-top:20px;
+  margin-bottom:40px;
+  color:white;
+}
+
+.post-content .content{
+  /* margin-left:100px;
+  margin-right: 40px;
+  padding-left:100px;
+} */
+}
+  
+
+
+
+/* endpost */
+
 
 @media only screen and (max-width: 1526px) {
   .ig-photo:nth-child(3) {

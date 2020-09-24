@@ -1,5 +1,8 @@
 const myDiv = document.getElementById('myWrk');
 var counter = 0;
+var locate = window.location.href;
+
+console.log(locate)
 
 function drasl(){
     if (counter % 2 == 0){

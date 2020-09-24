@@ -1,16 +1,13 @@
 from django.db import models
-from tinymce.models import HTMLField # remember to delete tinyemc package.
 from ckeditor.fields import RichTextField 
-import datetime
+import datetime #used to help formatting the instance from DateTimeField
 # RichTextField from django-ckeditor package - allow us to add image and style our posts.
 
-month_list = [
-    ''
-]
 
 # Create your models here.
 
 class Post(models.Model):
+    '''Model for each post on the site'''
     title =  models.CharField(max_length=100)
     slug = models.SlugField(max_length=200, unique=True)
     content = RichTextField(blank=True, null=True)
@@ -20,16 +17,17 @@ class Post(models.Model):
     extract = models.CharField(max_length=300, default="Extract from post")
 
     class Meta:
+        ''' posts are ordered by their creation date '''
         ordering = ['timestamp'] 
-        
+
     def __str__(self):
         return self.title
 
     def get_date(self):
+        ''' returns a formatted datestring'''
         new_format = str(self.timestamp).split(' ')
         year, month, date = new_format[0].split('-')
         month = datetime.datetime.strptime(month, "%m")
         month_name = month.strftime("%B")
         return "{} - {} - {}".format(date, month_name, year)
         
- 
